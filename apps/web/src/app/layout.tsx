@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
+import { TooltipProvider } from "@/components/shadcn/tooltip";
+import { kyobohand } from "@/config/fonts/kyobohand";
+import { pretendard } from "@/config/fonts/pretendard";
+import { ridi } from "@/config/fonts/ridi";
 import { defaultMetadata } from "@/config/metadata/default";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { TanstackQueryProvider } from "@/intergations/tanstack-query/provider";
 
 export const metadata: Metadata = defaultMetadata;
 
@@ -22,7 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+      <body className={`${pretendard.variable} ${ridi.variable} ${kyobohand.variable} font-pretendard antialiased`}>
+        <TooltipProvider>
+          <TanstackQueryProvider>
+            <NuqsAdapter>{children}</NuqsAdapter>
+          </TanstackQueryProvider>
+        </TooltipProvider>
+      </body>
     </html>
   );
 }
