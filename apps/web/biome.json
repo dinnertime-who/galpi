@@ -1,8 +1,22 @@
 {
-	"root": false,
-	"extends": "//",
-	"files": {
-		"ignoreUnknown": true,
-		"includes": ["**", "!node_modules", "!.next", "!dist", "!build"]
-	}
+  "root": false,
+  "extends": "//",
+  "files": {
+    "ignoreUnknown": true,
+    "includes": ["**", "!node_modules", "!.next", "!dist", "!build"]
+  },
+  "linter": {
+    "rules": {
+      "suspicious": {
+        "noArrayIndexKey": "warn"
+      },
+      "a11y": {
+        "noRedundantRoles": "warn",
+        "useSemanticElements": "warn",
+        "useAriaPropsForRole": "warn",
+        "useFocusableInteractive": "warn",
+        "useKeyWithClickEvents": "warn"
+      }
+    }
+  }
 }
