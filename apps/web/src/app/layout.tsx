@@ -6,7 +6,7 @@ import { kyobohand } from "@/config/fonts/kyobohand";
 import { pretendard } from "@/config/fonts/pretendard";
 import { ridi } from "@/config/fonts/ridi";
 import { defaultMetadata } from "@/config/metadata/default";
-import { TanstackQueryProvider } from "@/intergations/tanstack-query/provider";
+import { TanstackQueryProvider } from "@/integrations/tanstack-query/provider";
 
 export const metadata: Metadata = defaultMetadata;
 
