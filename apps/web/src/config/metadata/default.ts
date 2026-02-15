@@ -6,4 +6,10 @@ export const defaultMetadata: Metadata = {
     default: "갈피 - 하루를 기록하는 또다른 방법",
   },
   description: "갈피 - 하루를 기록하는 또다른 방법",
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "갈피 - 하루를 기록하는 또다른 방법",
+  },
 };

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
+import { ViewTransition } from "react";
 import { TooltipProvider } from "@/components/shadcn/tooltip";
 import { kyobohand } from "@/config/fonts/kyobohand";
 import { pretendard } from "@/config/fonts/pretendard";
@@ -20,7 +21,9 @@ export default function RootLayout({
       <body className={`${pretendard.variable} ${ridi.variable} ${kyobohand.variable} font-pretendard antialiased`}>
         <TooltipProvider>
           <TanstackQueryProvider>
-            <NuqsAdapter>{children}</NuqsAdapter>
+            <NuqsAdapter>
+              <ViewTransition>{children}</ViewTransition>
+            </NuqsAdapter>
           </TanstackQueryProvider>
         </TooltipProvider>
       </body>

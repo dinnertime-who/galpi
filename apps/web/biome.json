@@ -15,7 +15,8 @@
         "useSemanticElements": "warn",
         "useAriaPropsForRole": "warn",
         "useFocusableInteractive": "warn",
-        "useKeyWithClickEvents": "warn"
+        "useKeyWithClickEvents": "warn",
+        "noStaticElementInteractions": "warn"
       }
     }
   }
