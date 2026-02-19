@@ -1,0 +1,11 @@
+@keyframes text-pulse {
+  0% {
+    color: var(--color-primary);
+  }
+  50% {
+    color: var(--color-white);
+  }
+  100% {
+    color: var(--color-primary);
+  }
+}

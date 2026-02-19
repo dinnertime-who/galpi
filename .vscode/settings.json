@@ -25,5 +25,6 @@
     "source.fixAll.biome": "always",
     "source.removeUnusedImports": "always"
   },
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "css.lint.unknownAtRules": "ignore"
 }
